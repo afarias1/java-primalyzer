@@ -1,13 +1,17 @@
-package primeanalyzer.main;
+package primeanalyzer.controller;
 
 import java.io.Serializable;
+import java.net.URL;
 import java.util.List;
- 
+import java.util.ResourceBundle;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+
+import primeanalyzer.model.Model;
  
 public class Controller<T, Id extends Serializable> implements DAO<T, Id> {
  
@@ -109,4 +113,6 @@ public class Controller<T, Id extends Serializable> implements DAO<T, Id> {
         }
         System.out.print("]");          
     }
+
+	
 }
